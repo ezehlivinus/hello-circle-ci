@@ -27,6 +27,8 @@ jobs:
       - run:
           name: "Print hello"
           command: "echo hello "
+      - run:
+          name: "Print world ENV"
           command: echo $AUTHOR
   
   print_world:
@@ -38,6 +40,8 @@ jobs:
       - run:
           name: "Print world"
           command: "echo world"
+      - run:
+          name: "Print world ENV"
           command: echo $AUTHOR
 
 
