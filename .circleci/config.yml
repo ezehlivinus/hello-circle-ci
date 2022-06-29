@@ -27,7 +27,7 @@ jobs:
       - run:
           name: "Print hello"
           command: "echo hello "
-          command: $AUTHOR
+          command: echo $AUTHOR
   
   print_world:
     docker:
@@ -38,7 +38,7 @@ jobs:
       - run:
           name: "Print world"
           command: "echo world"
-          command: $AUTHOR
+          command: echo $AUTHOR
 
 
 # Invoke jobs via workflows
