@@ -30,7 +30,7 @@ jobs:
   
   print_world:
     docker:
-      - image: circleci/node:16.0.0
+      - image: circleci/node:13.8.0
 
     steps:
       - checkout
