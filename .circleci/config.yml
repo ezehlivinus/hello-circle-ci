@@ -28,8 +28,8 @@ jobs:
           name: "Print hello"
           command: "echo hello "
       - run:
-          name: "Print world ENV"
-          command: echo $AUTHOR
+          name: "Print hello ENV"
+          command: "echo $AUTHOR"
   
   print_world:
     docker:
