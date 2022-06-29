@@ -50,6 +50,7 @@ jobs:
 
     steps:
       - checkout
+      - run:
           name: "Print my name"
           command: echo $AUTHOR
 
