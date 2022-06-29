@@ -60,6 +60,7 @@ jobs:
 workflows:
   say-hello-workflow:
     jobs:
+      - print_my_name
       - print_hello
       - print_world:
           requires:
