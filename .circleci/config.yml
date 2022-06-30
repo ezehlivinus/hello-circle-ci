@@ -38,7 +38,7 @@ jobs:
       - image: circleci/node:13.8.0
 
     steps:
-      - checkout
+      # - checkout
       - attach_workspace:
           at: ~/
       - run: ls ~/ -a
