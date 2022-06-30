@@ -26,12 +26,12 @@ jobs:
       - run: pwd && ls -a
       - run:
           name: "Save hello world output"
-          command: echo "Hello world...Ezeh Livinus" > output.txt
+          command: echo "Hello world...Ezeh Livinus" > ~/output.txt
 
       - persist_to_workspace:
-          root: workspace
+          root: .~/
           paths:
-            - ./output.txt
+            - ~/output.txt
 
 
   print_output_file:
@@ -41,8 +41,8 @@ jobs:
     steps:
       - checkout
       - attach_workspace:
-          at: workspace
-      - run: cat ./output.txt
+          at: ~/
+      - run: cat ~/output.txt
 
 
 # Invoke jobs via workflows
