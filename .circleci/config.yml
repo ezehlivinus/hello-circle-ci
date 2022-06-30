@@ -39,9 +39,9 @@ jobs:
       - image: circleci/node:13.8.0
 
     steps:
-      - attach_workspace:
-          at: /tmp/workspace
       - checkout
+      - attach_workspace:
+          at: tmp/workspace
       - run:
           name: "print out file content"
           command: cat output.txt
