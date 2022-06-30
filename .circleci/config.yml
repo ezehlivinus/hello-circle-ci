@@ -26,6 +26,7 @@ jobs:
       - run: ls ~/ -a
       - run: echo "Hello world...Ezeh Livinus" > ~/output.txt
       - run: ls ~/ -a
+      - run: cat ~/output.txt
 
       - persist_to_workspace:
           root: .~/
