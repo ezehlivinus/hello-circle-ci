@@ -24,12 +24,13 @@ jobs:
     steps:
       - checkout
       - run: mkdir -p workspace
+      - run: pwd && ls -a
       - run:
           name: "Save hello world output"
           command: echo "Hello world...Ezeh Livinus" > output.txt
 
       - persist_to_workspace:
-          root: tmp/workspace
+          root: workspace
           paths:
             - output.txt
 
@@ -42,7 +43,6 @@ jobs:
       - checkout
       - attach_workspace:
           at: workspace
-      - run: pwd && ls -a
       - run:
           name: "print out file content"
           command: cat output.txt
