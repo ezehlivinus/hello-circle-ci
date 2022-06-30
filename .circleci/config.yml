@@ -42,6 +42,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: tmp/workspace
+      - run: pwd && ls -a
       - run:
           name: "print out file content"
           command: cat output.txt
