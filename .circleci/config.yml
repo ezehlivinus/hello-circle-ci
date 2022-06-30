@@ -23,7 +23,7 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - checkout
-      - run: pwd && ls -a
+      - run: ls ~/ -a
       - run:
           name: "Save hello world output"
           command: echo "Hello world...Ezeh Livinus" > ~/output.txt
@@ -42,6 +42,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/
+      - run: ls ~/ -a
       - run: cat ~/output.txt
 
 
