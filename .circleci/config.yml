@@ -26,7 +26,7 @@ jobs:
       - run: ls ~/ -a
       - run:
           name: "Save hello world output"
-          command: echo "Hello world...Ezeh Livinus" > ~/output.txt
+          run: echo "Hello world...Ezeh Livinus" > ~/output.txt
 
       - persist_to_workspace:
           root: .~/
