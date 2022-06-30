@@ -43,9 +43,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: workspace
-      - run:
-          name: "print out file content"
-          command: cat output.txt
+      - run: cat output.txt
 
 
 # Invoke jobs via workflows
