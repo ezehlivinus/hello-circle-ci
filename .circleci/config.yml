@@ -23,7 +23,7 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - checkout
-      - run: mkdir -p tmp/workspace
+      - run: mkdir -p workspace
       - run:
           name: "Save hello world output"
           command: echo "Hello world...Ezeh Livinus" > output.txt
