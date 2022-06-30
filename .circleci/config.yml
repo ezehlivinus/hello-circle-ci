@@ -32,7 +32,7 @@ jobs:
       - persist_to_workspace:
           root: workspace
           paths:
-            - output.txt
+            - ./output.txt
 
 
   print_output_file:
@@ -43,7 +43,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: workspace
-      - run: cat output.txt
+      - run: cat ./output.txt
 
 
 # Invoke jobs via workflows
