@@ -71,6 +71,17 @@ jobs:
     steps:
       - print_workflow_id
 
+  destined_to_fail:
+    docker:
+      - image: circleci/node:13.8.0
+      steps:
+        - run: echo "demonstrating failure"
+
+        - run: ech 123456789
+
+        - run: echo "Hello Error"
+          when: on_fail
+
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
@@ -82,3 +93,4 @@ workflows:
             - save_hello_world_output
       - print_my_pipeline_id
       - print_my_workflow_id
+      - destined_to_fail
