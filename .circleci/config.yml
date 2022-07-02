@@ -77,11 +77,11 @@ jobs:
     steps:
       - run: echo "demonstrating failure"
 
-      - run: ech 123456789
+      - run: return 1
 
       - run:
           name: on error
-          command: echo "Error...."
+          command: echo "Hello Error...."
           when: on_fail
 
 # Invoke jobs via workflows
