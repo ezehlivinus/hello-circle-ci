@@ -74,13 +74,13 @@ jobs:
   destined_to_fail:
     docker:
       - image: circleci/node:13.8.0
-      steps:
-        - run: echo "demonstrating failure"
+    steps:
+      - run: echo "demonstrating failure"
 
-        - run: ech 123456789
+      - run: ech 123456789
 
-        - run: echo "Hello Error"
-          when: on_fail
+      - run: echo "Hello Error"
+        when: on_fail
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
